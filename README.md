@@ -2,19 +2,24 @@
 # Atari-Deep-Reinforcement-Learning-
 
 
-I have tried to implement the algorithm(Deep Q-learning with Experience Replay) given in this novel paper.
+I have tried to implement the algorithm(Deep Q-learning with Experience Replay) given in paper Playing Atari with Deep Reinforcement Learning, published by brilliant Ioannis Antonoglou while he was at DeepMind Technologies along with his Team.
+
 Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 
 I have added the folder of weights, please do consider evaluating them.
 
 # Deep Q-learning with Experience Replay :
-Its really not possible to use a simple Q-table for training games like chess,mario or breakout unless we have a memory size which can handle a state-space of order 10^100 and a super computer to speed up computations. To avoid this problem,I used a Deep Q network(DQN) approximating Q(s, a) value.
+Its really not possible to use a simple Q-table for training games like Chess,Mario or Breakout unless we have a memory size which can handle a state-space of order 10^100 and a super computer to speed up computations. To avoid this problem,I used a Deep Q network(DQN) approximating Q(s, a) value.
 
 To approximate the next Q value, which would be required to train the policy network, made a clone of the policy network called the Target Network. To this target network,passed the state of game that is reached due to the action dictated by the policy network's output, i.e, the Q values. Taking this state as input, the target network generates the Q-values for next action.
 
-![DQN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/DQN_Algorithm.png)
+![DQN] <img width="645" height="361" alt="DQN_Algorithm" src="https://github.com/user-attachments/assets/42d373f5-a5fe-4b97-ba3c-06bda86326cc" />
 
-![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/CNN.png)
+![DQN Formula] <img width="639" height="44" alt="DQN_Formula" src="https://github.com/user-attachments/assets/90eea110-7f2e-480e-9d82-3cf357b69ab5" />
+
+ 
+![CNN] <img width="674" height="243" alt="CNN(1)" src="https://github.com/user-attachments/assets/fb521ef3-3cfd-41ea-886e-db9e9ff0a360" />
+
 
 With both experience replay and the target network, here's a more stable input and output to train the network and behaves more like supervised training.
 
@@ -25,17 +30,21 @@ Have have used Keras for all implementations and Matplotlib to visualize the gra
 
 # Results from our experiments :
 
-![Breakout avg](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/Breakout%2050%20Avg.png)
+![Breakout avg](<img width="1920" height="1440" alt="Breakout 50 Avg" src="https://github.com/user-attachments/assets/4375b78d-6551-494a-95a1-f032b4a79e3a" />
+)
 
-![Breakout score](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/Breakout%20Score.png)
+![Breakout score](<img width="1920" height="1440" alt="Breakout Score" src="https://github.com/user-attachments/assets/5e0411ce-72cd-4bca-8546-c24b192e78ee" />
+)
 
-![SpaceInvaders avg](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/SpaceInvaders%20Avg%2010.png)
+![SpaceInvaders avg](<img width="1920" height="1440" alt="SpaceInvaders Avg 10" src="https://github.com/user-attachments/assets/e83e3946-9070-4939-8b8c-f39a1f6ad0b7" />
+)
 
-![SpaceInvaders score](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/SpaceInvaders%20Score.png)
+![SpaceInvaders score](<img width="1920" height="1440" alt="SpaceInvaders Score" src="https://github.com/user-attachments/assets/06a1ab0b-7e04-4bfc-8668-9ad5e7a86071" />
+)
 
-# Issues Commonly facesd :
+# Issues Commonly faced :
 
-* I needed to take care of some issues in games like Breakout where fire has to be pressed manually after losing a life. This is done because the Q-value of "fire" becomes very less and it is very hard to determine those 5 occurences(5 Lives) of pressing fire. There is a similar problem in Pong as well.
+* I needed to take care of some issues in games like Breakout where fire has to be pressed manually after losing a life. This is done because the Q-value of "fire" becomes very less and it is very hard to determine those 5 occurrences(5 Lives) of pressing fire. There is a similar problem in Pong as well.
 
 * Initially in Breakout, agent was getting decent score but it was because this agent was getting stuck at local minima. The Slider moved to the extreme of the frame to gain some initial advantage but was getting stuck there.
 
@@ -43,7 +52,7 @@ Have have used Keras for all implementations and Matplotlib to visualize the gra
 
 * pip install -r requirements.txt
 * Before training, make sure you set the [hyperparameters](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/hyperparameters.py) correctly.
-* python main.py GAME_NAME (By default, breakout is loaded and games are loaded in a deterministic enviroment(v4))
-* Choose among the options : 1 for train, 2 for test, 3 for seeing results on our pretrained weights(Log files are used for this purpose).
+* python main.py GAME_NAME (By default, breakout is loaded and games are loaded in a deterministic environment(v4))
+* Choose among the options : 1 for train, 2 for test, 3 for seeing results on our pre-trained weights(Log files are used for this purpose).
 * When training for first time, initial exploration will be done first and then training. User has to manually enter the number of episodes he want to train the agent.
 * All weights,experiences,logs and results can be found in the Assets folder.
