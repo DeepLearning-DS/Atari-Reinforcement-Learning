@@ -30,17 +30,16 @@ Have have used Keras for all implementations and Matplotlib to visualize the gra
 
 # Results from our experiments :
 
-![Breakout avg](<img width="1920" height="1440" alt="Breakout 50 Avg" src="https://github.com/user-attachments/assets/4375b78d-6551-494a-95a1-f032b4a79e3a" />
-)
+![Breakout avg] <img width="1920" height="1440" alt="Breakout 50 Avg" src="https://github.com/user-attachments/assets/4375b78d-6551-494a-95a1-f032b4a79e3a" />
 
-![Breakout score](<img width="1920" height="1440" alt="Breakout Score" src="https://github.com/user-attachments/assets/5e0411ce-72cd-4bca-8546-c24b192e78ee" />
-)
 
-![SpaceInvaders avg](<img width="1920" height="1440" alt="SpaceInvaders Avg 10" src="https://github.com/user-attachments/assets/e83e3946-9070-4939-8b8c-f39a1f6ad0b7" />
-)
+![Breakout score] <img width="1920" height="1440" alt="Breakout Score" src="https://github.com/user-attachments/assets/5e0411ce-72cd-4bca-8546-c24b192e78ee" />
 
-![SpaceInvaders score](<img width="1920" height="1440" alt="SpaceInvaders Score" src="https://github.com/user-attachments/assets/06a1ab0b-7e04-4bfc-8668-9ad5e7a86071" />
-)
+
+![SpaceInvaders avg] <img width="1920" height="1440" alt="SpaceInvaders Avg 10" src="https://github.com/user-attachments/assets/e83e3946-9070-4939-8b8c-f39a1f6ad0b7" />
+
+
+![SpaceInvaders score] <img width="1920" height="1440" alt="SpaceInvaders Score" src="https://github.com/user-attachments/assets/06a1ab0b-7e04-4bfc-8668-9ad5e7a86071" />
 
 # Issues Commonly faced :
 
